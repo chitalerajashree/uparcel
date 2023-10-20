@@ -1,0 +1,75 @@
+driver = webdriver.Chrome()
+url = "https://stg.uparcel.sg"
+driver.get(url)
+
+signUp_button = driver.find_element_by_link_text("signUp")
+signUp_button.click()
+
+#Full name Field
+fullName_field = driver.find_element_by_name("fullname")
+fullName_field.send_keys("RajashreeChitale")
+
+#Email field
+email_field = driver.find_element_by_name("email")
+email_field.send_keys("chitalerajashree@gmail.com")
+
+#Mobile Number feild
+mob_field= driver.find_element_by_name("contact")
+mob_field.send_keys("9561487882")
+
+#password feild
+pass_feild = driver.find_element_by_name("pass")
+pass_feild.send_keys("Rajashree123")
+
+#Confirme Pass feild
+ Confirmepass_feild = driver.find_element_by_name("confirm")
+Confirmepass_feild.send_keys("Rajashree123")
+
+#How did you find uparcel
+dropdown = driver.find_element_by_id("cust_find_from")
+selectv = select(dropdown)
+select.select_by_index(1)
+
+#check box
+checkbox = driver.find_element_by_class("cr-icon fa fa-check")
+if not checkbox.is.selected():
+checkbox.click()
+
+#Register now button
+registernow_field = driver.find_element_by_id("cust-signup")
+registernow_field.click()
+
+#login functionality
+#Email addresss
+email_field = driver.find_element_by_name("email")
+email_field.send_keys("chitalerajashree@gmail.com")
+
+#Password field
+#password feild
+pass_feild = driver.find_element_by_name("password")
+pass_feild.send_keys("Rajashree123")
+
+#login button field
+login_button= driver.find_element_by_id("submit")
+login_button.click()
+
+#forget password
+forgetpass_field = driver.find_element_by_id("forgot")
+forgetpass_field.click()
+
+#Radio buttons
+#Reset by email
+radio_button = driver.find_element_by_id("via_email_label")
+radio_button.click()
+
+#Email addresss
+email_field = driver.find_element_by_name("email")
+email_field.send_keys("chitalerajashree@gmail.com")
+
+
+#subimt button
+submit_button = driver.find_element_by_link_text(" Submit ")
+submit_button.click()
+
+
+
